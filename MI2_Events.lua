@@ -261,9 +261,9 @@ local function MI2_OnTargetChanged()
 		end
 	end
 
-	if name and level and maxHealth == 100
+	if name and level and maxHealth
 			and (UnitCanAttack("player","target") or UnitIsPlayer("target")) then
-		MI2_Target = { name=name, level=level, tempDamage=0, maxHealth=100 }
+		MI2_Target = { name=name, level=level, tempDamage=0, maxHealth=maxHealth }
 		MI2_Target.class = UnitClass("target")
 		MI2_Target.lastPercent = UnitHealth("target")
 
