@@ -1,3 +1,6 @@
+Turtle edit
+- Fixed lua errors that occured on some instanced mobs
+
 MobInfo-2 is a World of Warcraft AddOn that provides you with useful additional information about Mobs (ie. opponents/monsters). It adds new information to the game's Tooltip whenever you hover with your mouse over a mob. It also adds a numeric display of the Mobs health and mana (current and max) to the Mob target frame. MobInfo-2 is the continuation of the now abandoned "MobInfo" by Dizzarian combined with the original "MobHealth2" by Wyv. 
 
 [[ IMPORTANT NOTE FOR DEVELOPERS OF OTHER ADDONS:           ]]
