@@ -1526,13 +1526,19 @@ end -- MI2_AddItemsToTooltip
 local function MI2_AddLocationToTooltip( location, showFullLocation )
 	local x = floor( (location.x1 + location.x2) / 2 )
 	local y = floor( (location.y1 + location.y2) / 2 )
-	local zone = MI2_Zones[location.c][location.z]
+	local zone = nil
+	if MI2_Zones[location.c] then
+		zone = MI2_Zones[location.c][location.z]
+	end
 	if zone then
 		if showFullLocation then
 			GameTooltip:AddLine( mifontGold..MI_TXT_LOCATION..mifontWhite..zone.." ("..x.."/"..y..")" )
 		else
 			GameTooltip:AddLine( mifontGold..MI_TXT_LOCATION..mifontWhite..zone )
 		end
+	end
+	if not zone then
+		GameTooltip:AddLine( mifontGold..MI_TXT_LOCATION..mifontWhite.."Unknown")
 	end
 end -- MI2_AddLocationToTooltip()
 
